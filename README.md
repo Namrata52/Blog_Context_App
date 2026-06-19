@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# Blogs Context App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A React application that demonstrates dynamic blog filtering and navigation using **Context API** and **React Router**. The app allows users to browse blogs by categories and tags while maintaining URL-based state and supporting pagination.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+* 📝 Display blogs using the React Context API
+* 🏷️ Filter blogs by tags using `useLocation` and `useSearchParams`
+* 📂 Filter blogs by categories with dynamic routing
+* 🔄 Automatically display all blogs associated with a selected tag or category
+* 📄 Pagination with 6 blogs per page
+* ⏭️ Navigate between pages using **Next** and **Previous** controls powered by `useNavigate`
+* 🔗 URL-aware navigation using `location.pathname` and `location.search`
+* ⚡ Client-side routing with React Router for a smooth user experience
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* React
+* Context API (`useContext`)
+* React Router
+* `useLocation`
+* `useSearchParams`
+* `useNavigate`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How It Works
 
-### `npm test`
+* Clicking on a **tag** updates the URL and displays all blogs containing that tag.
+* Clicking on a **category** filters and displays all blogs belonging to that category.
+* The application reads query parameters and path information using `useLocation`, `useSearchParams`, `location.pathname`, and `location.search` to determine what content to render.
+* Blog data is shared across components through the **Context API**, eliminating unnecessary prop drilling.
+* Pagination limits the displayed results to 6 blogs per page and provides intuitive navigation between pages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Learning Objectives
 
-### `npm run build`
+This project showcases practical usage of:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* React Context API for state management
+* URL-based filtering and routing
+* Query parameter handling with `useSearchParams`
+* Route information with `useLocation`
+* Programmatic navigation using `useNavigate`
+* Pagination logic in React applications
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Getting Started
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository.
+2. Install dependencies:
 
-### `npm run eject`
+   ```bash
+   npm install
+   ```
+3. Start the development server:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm start
+   ```
+4. Open the application in your browser and explore blogs by tags, categories, and paginated pages.
